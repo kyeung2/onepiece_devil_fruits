@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'com.nimbus'
+group = 'com.nimus.onepiece.devilfruits'
 
 java {
     toolchain {

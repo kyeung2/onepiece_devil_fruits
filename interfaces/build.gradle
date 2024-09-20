@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'com.nimbus'
+group = 'com.nimus.onepiece.devilfruits'
 version = '1.0.0'
 
 java {
