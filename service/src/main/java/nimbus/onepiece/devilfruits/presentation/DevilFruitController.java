@@ -2,6 +2,7 @@ package nimbus.onepiece.devilfruits.presentation;
 
 
 import nimbus.onepiece.devilfruits.interfaces.DevilFruit;
+import nimbus.onepiece.devilfruits.interfaces.StaticDevilFruits;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
@@ -10,7 +11,7 @@ import reactor.core.publisher.Mono;
 public class DevilFruitController {
 
     @GetMapping
-    public Mono<DevilFruit> getDevilFruit(){
-        return Mono.just(new DevilFruit());
+    public Mono<DevilFruit> getDevilFruit() {
+        return Mono.just(StaticDevilFruits.GOMU_GOMU_NO_MI);
     }
 }

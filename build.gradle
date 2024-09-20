@@ -10,12 +10,7 @@ java {
     }
 }
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-
 }
 
 tasks.named('test') {
