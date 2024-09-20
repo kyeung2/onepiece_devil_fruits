@@ -1,9 +1,7 @@
-package nimbus.onepiece.devilfruits.interfaces;
+package nimbus.onepiece.devilfruits.domain;
 
 import lombok.Builder;
 import lombok.NonNull;
-
-import java.util.UUID;
 
 
 @Builder

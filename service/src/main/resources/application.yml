@@ -1,3 +1,5 @@
 spring:
   application:
     name: onepiece_devilfruits
+  config:
+    import: classpath:devilfruits-data.yml
