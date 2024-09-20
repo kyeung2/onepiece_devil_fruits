@@ -1,1 +1,3 @@
 rootProject.name = 'onepiece_devilfruits'
+include 'service'
+include 'interfaces'

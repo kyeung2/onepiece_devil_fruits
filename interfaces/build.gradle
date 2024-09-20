@@ -1,0 +1,29 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = 'com.nimbus'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+dependencies {
+    // Define dependencies needed for interfaces (if any)
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url = uri('../../local-repo') // Or use a remote repo like GitHub Packages
+        }
+    }
+}
