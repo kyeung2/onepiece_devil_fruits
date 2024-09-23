@@ -1,11 +1,11 @@
-package nimbus.onepiece.devilfruits.presentation;
+package com.nimbus.onepiece.devilfruits.presentation;
 
 
 import lombok.RequiredArgsConstructor;
-import nimbus.onepiece.devilfruits.domain.DevilFruit;
-import nimbus.onepiece.devilfruits.interfaces.dto.DevilFruitDto;
-import nimbus.onepiece.devilfruits.interfaces.dto.DevilFruitTypeDto;
-import nimbus.onepiece.devilfruits.service.DevilFruitService;
+import com.nimbus.onepiece.devilfruits.domain.DevilFruit;
+import com.nimbus.onepiece.devilfruits.interfaces.dto.DevilFruitDto;
+import com.nimbus.onepiece.devilfruits.interfaces.dto.DevilFruitTypeDto;
+import com.nimbus.onepiece.devilfruits.service.DevilFruitService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

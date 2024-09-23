@@ -1,4 +1,4 @@
-package nimbus.onepiece.devilfruits.domain;
+package com.nimbus.onepiece.devilfruits.domain;
 
 public enum DevilFruitType {
     PARAMECIA,

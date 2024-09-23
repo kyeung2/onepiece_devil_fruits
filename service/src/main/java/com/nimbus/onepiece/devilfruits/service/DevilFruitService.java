@@ -1,9 +1,9 @@
-package nimbus.onepiece.devilfruits.service;
+package com.nimbus.onepiece.devilfruits.service;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import nimbus.onepiece.devilfruits.domain.DevilFruit;
-import nimbus.onepiece.devilfruits.persistence.InMemoryDevilFruitRepository;
+import com.nimbus.onepiece.devilfruits.domain.DevilFruit;
+import com.nimbus.onepiece.devilfruits.persistence.InMemoryDevilFruitRepository;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

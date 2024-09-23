@@ -1,6 +1,6 @@
-package nimbus.onepiece.devilfruits;
+package com.nimbus.onepiece.devilfruits;
 
-import nimbus.onepiece.devilfruits.config.DevilFruitsData;
+import com.nimbus.onepiece.devilfruits.config.DevilFruitsData;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

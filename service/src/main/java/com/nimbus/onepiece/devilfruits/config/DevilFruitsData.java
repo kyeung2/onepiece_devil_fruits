@@ -1,8 +1,8 @@
-package nimbus.onepiece.devilfruits.config;
+package com.nimbus.onepiece.devilfruits.config;
 
 import lombok.Getter;
 import lombok.Setter;
-import nimbus.onepiece.devilfruits.domain.DevilFruitType;
+import com.nimbus.onepiece.devilfruits.domain.DevilFruitType;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.List;

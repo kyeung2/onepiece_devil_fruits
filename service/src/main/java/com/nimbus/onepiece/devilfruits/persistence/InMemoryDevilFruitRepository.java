@@ -1,8 +1,8 @@
-package nimbus.onepiece.devilfruits.persistence;
+package com.nimbus.onepiece.devilfruits.persistence;
 
 import lombok.NonNull;
-import nimbus.onepiece.devilfruits.config.DevilFruitsData;
-import nimbus.onepiece.devilfruits.domain.DevilFruit;
+import com.nimbus.onepiece.devilfruits.config.DevilFruitsData;
+import com.nimbus.onepiece.devilfruits.domain.DevilFruit;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
