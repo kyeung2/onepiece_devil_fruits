@@ -35,4 +35,10 @@ public class StrawHatDevilFruits {
             .type(DevilFruitTypeDto.PARAMECIA)
             .ability("Grants the user resurrection and soul-based abilities")
             .build();
+
+    public static final Set<DevilFruitDto> ALL_STRAW_HATS = Set.of(
+            GOMU_GOMU_NO_MI,
+            HITO_HITO_NO_MI,
+            HANA_HANA_NO_MI,
+            YOMI_YOMI_NO_MI);
 }

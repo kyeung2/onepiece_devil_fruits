@@ -3,8 +3,8 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'com.nimus.onepiece.devilfruits'
-version = '1.0.0'
+group = 'com.nimbus.onepiece.devilfruits'
+version = '1.1.0'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_21
@@ -27,8 +27,7 @@ publishing {
         }
     }
     repositories {
-        maven {
-            url = uri('../../local-repo') // Or use a remote repo like GitHub Packages
-        }
+        // only publish this artefact to the local maven repo.
+        mavenLocal()
     }
 }
