@@ -4,10 +4,10 @@ import lombok.NonNull;
 import com.nimbus.onepiece.devilfruits.config.DevilFruitsData;
 import com.nimbus.onepiece.devilfruits.domain.DevilFruit;
 import org.springframework.stereotype.Repository;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
+import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class InMemoryDevilFruitRepository {
@@ -26,15 +26,13 @@ public class InMemoryDevilFruitRepository {
                 .toList();
     }
 
-    public Mono<DevilFruit> find(@NonNull String code) {
+    public Optional<DevilFruit> find(@NonNull String code) {
         return devilFruits.stream()
                 .filter(df -> df.code().equals(code))
-                .findFirst()
-                .map(Mono::just)
-                .orElse(Mono.empty());
+                .findFirst();
     }
 
-    public Flux<DevilFruit> findAll() {
-        return Flux.fromIterable(devilFruits);
+    public Collection<DevilFruit> findAll() {
+        return devilFruits;
     }
 }

@@ -5,8 +5,9 @@ import lombok.RequiredArgsConstructor;
 import com.nimbus.onepiece.devilfruits.domain.DevilFruit;
 import com.nimbus.onepiece.devilfruits.persistence.InMemoryDevilFruitRepository;
 import org.springframework.stereotype.Service;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
+
+import java.util.Collection;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -15,11 +16,11 @@ public class DevilFruitService {
 
     private final InMemoryDevilFruitRepository repository;
 
-    public Mono<DevilFruit> getDevilFruit(@NonNull String code){
+    public Optional<DevilFruit> getDevilFruit(@NonNull String code){
         return repository.find(code);
     }
 
-    public Flux<DevilFruit> getAllDevilFruits(){
+    public Collection<DevilFruit> getAllDevilFruits(){
         return repository.findAll();
     }
 }
