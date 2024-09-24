@@ -24,7 +24,7 @@ public class DevilFruitController {
     @GetMapping(params = "code")
     public DevilFruitDto getDevilFruit(@RequestParam String code) {
         return service.getDevilFruit(code)
-                .map(mapDto())
+                .map(mapToDto())
                 .orElse(null);
     }
 
@@ -32,11 +32,11 @@ public class DevilFruitController {
     public Collection<DevilFruitDto> getAllDevilFruits() {
         return service.getAllDevilFruits()
                 .stream()
-                .map(mapDto())
+                .map(mapToDto())
                 .toList();
     }
 
-    private static Function<DevilFruit, DevilFruitDto> mapDto() {
+    private static Function<DevilFruit, DevilFruitDto> mapToDto() {
         return domain -> DevilFruitDto.builder()
                 .code(domain.code())
                 .name(domain.name())
