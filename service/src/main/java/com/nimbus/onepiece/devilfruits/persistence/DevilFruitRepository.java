@@ -12,7 +12,6 @@ import java.util.Collection;
 import java.util.Optional;
 import java.util.UUID;
 
-//TODO test this slice
 @Repository
 @RequiredArgsConstructor
 public class DevilFruitRepository {
