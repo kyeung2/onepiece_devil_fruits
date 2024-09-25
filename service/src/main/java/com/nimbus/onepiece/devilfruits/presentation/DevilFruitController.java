@@ -7,8 +7,8 @@ import com.nimbus.onepiece.devilfruits.interfaces.dto.DevilFruitTypeDto;
 import com.nimbus.onepiece.devilfruits.service.DevilFruitService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
@@ -21,8 +21,8 @@ public class DevilFruitController {
 
     private final DevilFruitService service;
 
-    @GetMapping(params = "code")
-    public DevilFruitDto getDevilFruit(@RequestParam String code) {
+    @GetMapping(path = "/{code}")
+    public DevilFruitDto getDevilFruit(@PathVariable String code) {
         return service.getDevilFruit(code)
                 .map(mapToDto())
                 .orElse(null);
