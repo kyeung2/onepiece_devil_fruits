@@ -19,7 +19,7 @@ public class DevilFruitService {
     private final DevilFruitRepository repository;
 
     public Optional<DevilFruit> getDevilFruit(@NonNull String code) {
-        return repository.find(code)
+        return repository.findByCode(code)
                 .map(mapToDomain());
     }
 

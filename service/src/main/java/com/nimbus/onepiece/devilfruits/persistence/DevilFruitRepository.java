@@ -19,7 +19,7 @@ public class DevilFruitRepository {
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
 
-    public Optional<DevilFruitRecord> find(@NonNull String code) {
+    public Optional<DevilFruitRecord> findByCode(@NonNull String code) {
 
         MapSqlParameterSource params = new MapSqlParameterSource();
         params.addValue("code", code);
