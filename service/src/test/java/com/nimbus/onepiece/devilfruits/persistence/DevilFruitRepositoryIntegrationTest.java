@@ -19,6 +19,11 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/// ## Persistence layer logic
+/// This test uses the production `Flyway` migrations to ready the DB for testing.
+///
+/// Uses `Testcontainers` to hit a real Postgres server.
+///
 @SpringBootTest
 @ActiveProfiles("integration")
 @Testcontainers

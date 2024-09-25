@@ -18,7 +18,11 @@ import java.util.Optional;
 import static com.nimbus.onepiece.devilfruits.interfaces.dto.StrawHatDevilFruits.GOMU_GOMU_NO_MI;
 import static org.mockito.Mockito.when;
 
-
+/// ## Presentation layer logic
+/// Successful requests, error handling etc.
+///
+/// Uses a `WebTestClient` for real HTTP requests
+///
 @WebMvcTest
 @AutoConfigureWebTestClient
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -32,7 +36,7 @@ class DevilFruitControllerIntegrationTest {
     @Test
     @Order(1)
     void getDevilFruit() {
-        // given
+        //given
         when(service.getDevilFruit("DF0001")).thenReturn(Optional.of(
                 DevilFruit.builder()
                         .code(GOMU_GOMU_NO_MI.code())
@@ -57,7 +61,7 @@ class DevilFruitControllerIntegrationTest {
     @Test
     @Order(2)
     void unexpectedException() {
-        // given
+        //given
         when(service.getDevilFruit("DF0001"))
                 .thenThrow(new RuntimeException("Something unexpected happened"));
         //when
