@@ -1,4 +1,4 @@
-package com.nimbus.onepiece.devilfruits.interfaces.dto;
+package com.nimbus.onepiece.devilfruits.sdk.dto;
 
 import lombok.Builder;
 import lombok.NonNull;

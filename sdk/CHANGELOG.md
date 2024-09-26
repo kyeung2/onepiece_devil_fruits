@@ -1,0 +1,3 @@
+- V1.0.0 26/09/2024
+  - `BlockingDevilFruitsClient` added.
+  - auto configuration of client controlled via config properties added.

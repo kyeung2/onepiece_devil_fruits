@@ -1,0 +1,2 @@
+- V1.5.0 25/09/2024
+  - Initial Error contracts.

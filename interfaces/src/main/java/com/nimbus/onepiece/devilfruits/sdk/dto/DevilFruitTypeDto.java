@@ -1,4 +1,4 @@
-package com.nimbus.onepiece.devilfruits.interfaces.dto;
+package com.nimbus.onepiece.devilfruits.sdk.dto;
 
 public enum DevilFruitTypeDto {
     PARAMECIA,

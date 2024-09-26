@@ -1,0 +1,6 @@
+onepiece:
+  devilfruits:
+    sdk:
+      client:
+        enabled: true
+        baseUrl: http://localhost:8080

@@ -15,7 +15,7 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 
 import java.util.Optional;
 
-import static com.nimbus.onepiece.devilfruits.interfaces.dto.StrawHatDevilFruits.GOMU_GOMU_NO_MI;
+import static com.nimbus.onepiece.devilfruits.sdk.dto.StrawHatDevilFruits.GOMU_GOMU_NO_MI;
 import static org.mockito.Mockito.when;
 
 /// ## Presentation layer logic

@@ -1,6 +1,6 @@
 package com.nimbus.onepiece.devilfruits.presentation;
 
-import com.nimbus.onepiece.devilfruits.interfaces.dto.errors.ErrorDto;
+import com.nimbus.onepiece.devilfruits.sdk.dto.errors.ErrorDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

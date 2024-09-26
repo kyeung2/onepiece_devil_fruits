@@ -2,10 +2,11 @@ package com.nimbus.onepiece.devilfruits.presentation;
 
 
 import com.nimbus.onepiece.devilfruits.domain.DevilFruit;
-import com.nimbus.onepiece.devilfruits.interfaces.dto.DevilFruitDto;
-import com.nimbus.onepiece.devilfruits.interfaces.dto.DevilFruitTypeDto;
+import com.nimbus.onepiece.devilfruits.sdk.dto.DevilFruitDto;
+import com.nimbus.onepiece.devilfruits.sdk.dto.DevilFruitTypeDto;
 import com.nimbus.onepiece.devilfruits.service.DevilFruitService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,12 +18,14 @@ import java.util.function.Function;
 @RestController
 @RequestMapping("/devilfruits")
 @RequiredArgsConstructor
+@Slf4j
 public class DevilFruitController {
 
     private final DevilFruitService service;
 
     @GetMapping(path = "/{code}")
     public DevilFruitDto getDevilFruit(@PathVariable String code) {
+        log.info("something called me with code {}", code);
         return service.getDevilFruit(code)
                 .map(mapToDto())
                 .orElse(null);
