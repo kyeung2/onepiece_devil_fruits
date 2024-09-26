@@ -9,5 +9,5 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Setter
 public class DevilFruitsClientProperties {
 
-    private String baseUrl = "http://localhost:8080";
+    private String baseUrl = "http://localhost:8081";
 }

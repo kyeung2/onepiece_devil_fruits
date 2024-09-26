@@ -2,7 +2,6 @@ package com.nimbus.onepiece.devilfruits.sdk.client;
 
 import com.nimbus.onepiece.devilfruits.sdk.dto.DevilFruitDto;
 import com.nimbus.onepiece.devilfruits.sdk.dto.StrawHatDevilFruits;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
