@@ -34,7 +34,9 @@ public class DefaultDevilFruitsClient implements DevilFruitsClient {
                     }
                 })
                 // e.g. network, timeout, response processing exceptions inside the exchangeToMono block
-                .onErrorResume(ex -> Mono.error(new DevilFruitsGenericException(null, ex)));
+                .onErrorResume(
+                        ex -> !(ex instanceof DevilFruitsGenericException),
+                        ex -> Mono.error(new DevilFruitsGenericException(null, ex)));
     }
 
     @Override
@@ -53,7 +55,10 @@ public class DefaultDevilFruitsClient implements DevilFruitsClient {
                         return rs.createException().flatMapMany(cause -> Flux.error(new DevilFruitsGenericException(null, cause)));
                     }
                 })
-                .onErrorResume(ex -> Flux.error(new DevilFruitsGenericException(null, ex)));
+                // e.g. network, timeout, response processing exceptions inside the exchangeToMono block
+                .onErrorResume(
+                        ex -> !(ex instanceof DevilFruitsGenericException),
+                        ex -> Flux.error(new DevilFruitsGenericException(null, ex)));
     }
 
 }
