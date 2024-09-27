@@ -1,8 +1,9 @@
 package com.nimbus.onepiece.devilfruits.sdk.client;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nimbus.onepiece.devilfruits.sdk.dto.DevilFruitDto;
-import com.nimbus.onepiece.devilfruits.sdk.dto.StrawHatDevilFruits;
+import com.nimbus.onepiece.devilfruits.interfaces.dto.DevilFruitDto;
+import com.nimbus.onepiece.devilfruits.interfaces.dto.StrawHatDevilFruits;
+import com.nimbus.onepiece.devilfruits.sdk.client.DevilFruitsClient;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,19 +12,18 @@ import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;
 import org.springframework.test.context.ActiveProfiles;
 
 import java.util.Collection;
-import java.util.Optional;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
 @ActiveProfiles("integration")
 @AutoConfigureWireMock(port = 8081)
-class DefaultBlockingDevilFruitsClientTest {
+class DevilFruitsClientTest {
 
     @Autowired
-    BlockingDevilFruitsClient objectUnderTest;
+    DevilFruitsClient objectUnderTest;
     @Autowired
     ObjectMapper objectMapper;
 
@@ -33,10 +33,10 @@ class DefaultBlockingDevilFruitsClientTest {
         DevilFruitDto fruit = StrawHatDevilFruits.GOMU_GOMU_NO_MI;
         stubGetDevilFruitResponse(fruit);
         //when
-        Optional<DevilFruitDto> actual = objectUnderTest.getDevilFruit(fruit.code());
+        DevilFruitDto actual = objectUnderTest.getDevilFruit(fruit.code()).block();
         //then
-        assertTrue(actual.isPresent());
-        assertEquals(fruit, actual.get());
+        assertNotNull(actual);
+        assertEquals(fruit, actual);
     }
 
     @Test
@@ -44,8 +44,9 @@ class DefaultBlockingDevilFruitsClientTest {
         //given
         stubGetAllDevilFruitResponse(StrawHatDevilFruits.ALL_STRAW_HATS);
         //when
-        Collection<DevilFruitDto> actual = objectUnderTest.getAllDevilFruits();
+        Collection<DevilFruitDto> actual = objectUnderTest.getAllDevilFruits().collectList().block();
         //then
+        assertNotNull(actual);
         assertEquals(StrawHatDevilFruits.ALL_STRAW_HATS.size(), actual.size());
     }
 

@@ -1,4 +1,4 @@
-package com.nimbus.onepiece.devilfruits.sdk.dto.errors;
+package com.nimbus.onepiece.devilfruits.interfaces.dto.errors;
 
 import lombok.Builder;
 import lombok.NonNull;

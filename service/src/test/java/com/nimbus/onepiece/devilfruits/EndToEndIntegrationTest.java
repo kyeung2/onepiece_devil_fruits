@@ -11,7 +11,7 @@ import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
-import static com.nimbus.onepiece.devilfruits.sdk.dto.StrawHatDevilFruits.GOMU_GOMU_NO_MI;
+import static com.nimbus.onepiece.devilfruits.interfaces.dto.StrawHatDevilFruits.GOMU_GOMU_NO_MI;
 
 
 /// ## End to End Integration

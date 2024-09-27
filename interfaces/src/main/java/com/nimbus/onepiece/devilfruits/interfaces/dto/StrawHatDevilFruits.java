@@ -1,4 +1,4 @@
-package com.nimbus.onepiece.devilfruits.sdk.dto;
+package com.nimbus.onepiece.devilfruits.interfaces.dto;
 
 import lombok.experimental.UtilityClass;
 

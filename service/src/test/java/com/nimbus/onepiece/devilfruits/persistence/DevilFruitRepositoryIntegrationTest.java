@@ -1,6 +1,6 @@
 package com.nimbus.onepiece.devilfruits.persistence;
 
-import com.nimbus.onepiece.devilfruits.sdk.dto.StrawHatDevilFruits;
+import com.nimbus.onepiece.devilfruits.interfaces.dto.StrawHatDevilFruits;
 import com.nimbus.onepiece.devilfruits.persistence.records.DevilFruitRecord;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;

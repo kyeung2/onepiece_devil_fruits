@@ -2,8 +2,8 @@ package com.nimbus.onepiece.devilfruits.presentation;
 
 
 import com.nimbus.onepiece.devilfruits.domain.DevilFruit;
-import com.nimbus.onepiece.devilfruits.sdk.dto.DevilFruitDto;
-import com.nimbus.onepiece.devilfruits.sdk.dto.DevilFruitTypeDto;
+import com.nimbus.onepiece.devilfruits.interfaces.dto.DevilFruitDto;
+import com.nimbus.onepiece.devilfruits.interfaces.dto.DevilFruitTypeDto;
 import com.nimbus.onepiece.devilfruits.service.DevilFruitService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

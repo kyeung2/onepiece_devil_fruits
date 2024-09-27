@@ -1,7 +1,7 @@
 package com.nimbus.onepiece.devilfruits.sdk.config;
 
-import com.nimbus.onepiece.devilfruits.sdk.client.BlockingDevilFruitsClient;
-import com.nimbus.onepiece.devilfruits.sdk.client.DefaultBlockingDevilFruitsClient;
+import com.nimbus.onepiece.devilfruits.sdk.client.DefaultDevilFruitsClient;
+import com.nimbus.onepiece.devilfruits.sdk.client.DevilFruitsClient;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -25,8 +25,9 @@ public class DevilFruitsClientAutoConfiguration {
     }
 
     @Bean
-    public BlockingDevilFruitsClient blockingDevilFruitsClient(@Qualifier("devilFruitsWebClient") WebClient webClient) {
-        return new DefaultBlockingDevilFruitsClient(webClient);
+    public DevilFruitsClient devilFruitsClient(@Qualifier("devilFruitsWebClient") WebClient webClient) {
+        return new DefaultDevilFruitsClient(webClient);
     }
+
 
 }
