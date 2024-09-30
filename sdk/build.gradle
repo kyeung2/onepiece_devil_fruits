@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.nimbus.onepiece.devilfruits'
-version = '1.0.0'
+version = '1.1.1'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_22
@@ -32,7 +32,8 @@ dependencyManagement {
 }
 
 dependencies {
-    implementation project(':interfaces')
+    // 'api' to expose 'interfaces' to consumers
+    api project(':interfaces')
     implementation 'org.projectlombok:lombok'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     annotationProcessor 'org.projectlombok:lombok'
