@@ -7,3 +7,8 @@
 
 - V1.1.1 30/09/2024
   - fix bug where SDK did not have the META-INF configuration for auto config in consumers 
+- 
+- V1.1.2 03/10/2024
+  - WebClient.Builder to build client. Enables filters to automatically be added from client, e.g. distributed tracing headers.
+
+

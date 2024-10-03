@@ -15,3 +15,10 @@ spring:
     driver-class-name: org.postgresql.Driver
   flyway:
     enabled: true
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      # by default spring boot samples only 10% of the requests
+      probability: 1
