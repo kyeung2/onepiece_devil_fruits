@@ -26,6 +26,7 @@ dependencies {
     implementation 'org.flywaydb:flyway-database-postgresql'
     implementation 'io.micrometer:micrometer-tracing-bridge-otel'
     implementation 'io.opentelemetry:opentelemetry-exporter-zipkin'
+    implementation "net.ttddyy.observation:datasource-micrometer-spring-boot:1.0.5"
 
     runtimeOnly 'org.postgresql:postgresql'
     annotationProcessor 'org.projectlombok:lombok'
